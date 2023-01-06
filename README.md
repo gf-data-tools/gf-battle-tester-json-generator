@@ -1,2 +1,3 @@
 # GF Battle Tester Json Generator
-Just trying to write something with GUI. Pretty useless compared to the [excel tool](https://github.com/randomqwerty/GFLBattleSim-JSONGenerator) but I'm happy with the skin customization
+Just trying to write something with GUI. 
+Now we may generate teams that are normally **invalid**

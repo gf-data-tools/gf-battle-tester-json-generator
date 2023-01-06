@@ -6,27 +6,9 @@ from typing import *
 
 from gf_utils.stc_data import GameData
 
+from utils import menu_from_dict, var_min_max
+
 logger = logging.getLogger(__name__)
-
-
-def menu_from_dict(master: tk.Widget, options: dict, var_key: tk.Variable, var_value: tk.Variable):
-    menu = tk.Menu(master, tearoff=False)
-    for k, v in options.items():
-        if isinstance(v, dict):
-            menu.add_cascade(label=k, menu=menu_from_dict(menu, v, var_key, var_value))
-        else:
-            menu.add_radiobutton(
-                label=k, indicatoron=False, command=lambda k=k, v=v: (var_key.set(k), var_value.set(v))
-            )
-    return menu
-
-
-def var_min_max(var: tk.IntVar, min: int, max: int, *_):
-    v = var.get()
-    if v < min:
-        var.set(min)
-    if v > max:
-        var.set(max)
 
 
 class GunConfig(tk.Frame):
@@ -34,7 +16,6 @@ class GunConfig(tk.Frame):
         super().__init__(*args, **kwargs)
         self.idx = idx
         self.gamedata = gamedata
-        self.any_equip = False
 
         self.var_gun_name = tk.StringVar(value="-")
         self.var_gun_id = tk.IntVar(value=0)
@@ -121,7 +102,7 @@ class GunConfig(tk.Frame):
         grouped = {"-": 0} | {t: {r: {} for r in rank_map.values()} for t in type_map.values()}
         for gun in self.gamedata["gun"].values():
             if 9000 <= gun["id"] <= 20000 or gun["id"] >= 30000:
-                grouped[type_map[gun["type"]]]["..."][gun["name"]] = gun["id"]
+                grouped[type_map[gun["type"]]]["..."][str(gun["id"]) + " " + gun["name"]] = gun["id"]
             gun_name = gun["name"] if gun["id"] <= 20000 else "[MOD]" + gun["name"]
             grouped[type_map[gun["type"]]][rank_map[gun["rank_display"]]][gun_name] = gun["id"]
         return grouped
