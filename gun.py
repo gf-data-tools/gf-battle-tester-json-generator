@@ -103,8 +103,9 @@ class GunConfig(tk.Frame):
         for gun in self.gamedata["gun"].values():
             if 9000 <= gun["id"] <= 20000 or gun["id"] >= 30000:
                 grouped[type_map[gun["type"]]]["..."][str(gun["id"]) + " " + gun["name"]] = gun["id"]
-            gun_name = gun["name"] if gun["id"] <= 20000 else "[MOD]" + gun["name"]
-            grouped[type_map[gun["type"]]][rank_map[gun["rank_display"]]][gun_name] = gun["id"]
+            else:
+                gun_name = gun["name"] if gun["id"] <= 20000 else "[MOD]" + gun["name"]
+                grouped[type_map[gun["type"]]][rank_map[gun["rank_display"]]][gun_name] = gun["id"]
         return grouped
 
     def update_gun_opts(self, *_):

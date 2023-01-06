@@ -35,11 +35,13 @@ class App(tk.Tk):
             gun_record, equip_records = self.gun_config[idx].generate_records(pos)
             gun_full.append(gun_record)
             equip_full.update(equip_records)
+        fairy_full = {"1": self.fairy.generate_record()}
         import json
         from pathlib import Path
 
         json.dump(gun_full, Path("gun_with_user_info.json").open("w"))
         json.dump(equip_full, Path("equip_with_user_info.json").open("w"))
+        json.dump(fairy_full, Path("fairy_with_user_info.json").open("w"))
 
 
 if __name__ == "__main__":

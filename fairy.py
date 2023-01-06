@@ -56,3 +56,37 @@ class FairyConfig(tk.Frame):
         self.ent_rank.grid(row=3, column=1, sticky="we")
         tk.Label(self, text=f"技能").grid(row=4, column=0, sticky="e")
         self.ent_skill1.grid(row=4, column=1, sticky="we")
+
+    def generate_record(self):
+        fairy_id = self.var_fairy_id.get()
+        level = self.var_level.get()
+        rank = self.var_rank.get()
+        fairy_info = self.gamedata["fairy"][fairy_id]
+        quality_exp = eval(f"{{{fairy_info['quality_need_number']}}}")[rank]
+        record = {
+            "id": "1",
+            "user_id": "123456",
+            "fairy_id": fairy_id,
+            "team_id": "1",
+            "fairy_lv": level,
+            "fairy_exp": self.gamedata["fairy_exp_info"][str(level)]["exp"],
+            "quality_lv": rank,
+            "quality_exp": quality_exp,
+            "skill_lv": self.var_skill1.get(),
+            "passive_skill": self.var_talent_id.get(),
+            "is_locked": "1",
+            "equip_id": "0",
+            "adjust_count": "0",
+            "last_adjust": "0",
+            "passive_skill_collect": "0",
+            "skin": "0",
+        }
+        for k in record:
+            record[k] = str(record[k])
+        return record
+
+    def fairy_exp(self, lv):
+        if lv == 1:
+            return 0
+        ei = int(self.gamedata["fairy_exp_info"][str(lv - 1)]["exp"])
+        return self.fairy_exp(lv - 1) + ei
