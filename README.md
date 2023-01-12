@@ -1,6 +1,7 @@
 # GF Battle Tester Json Generator
-Just trying to write something with GUI. 
-Now we may generate teams that are normally **invalid**
+A tool for [GFAlarm](https://gall.dcinside.com/micateam/1439586) to create arbitrarily team in battle tester.
+
+You may even generate teams that are normally **invalid**
 
 Example Usage:
 ![config](img/showcase1.png)
