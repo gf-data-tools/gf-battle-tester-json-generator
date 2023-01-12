@@ -10,3 +10,5 @@ resource_downloader/dist
 test
 logs
 outputs/*.json
+/build
+/dist

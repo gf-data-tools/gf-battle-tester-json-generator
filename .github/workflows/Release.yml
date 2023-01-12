@@ -1,0 +1,41 @@
+name: Releases
+
+on: 
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v2.2.2
+      with:
+        python-version: '3.10'
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: Build Executable
+      run: |
+        pyinstaller app.spec
+        dir dist
+    - name: Create zip file
+      run: Compress-Archive -Path dist/GF-BattleTester-JsonGenerator/* -DestinationPath GF-BattleTester-JsonGenerator.zip -Force
+    - name: Pre-Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      if: "!contains(github.ref, 'refs/tags/v')"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        files: |
+          ./GF-BattleTester-JsonGenerator.zip
+    - name: Tagged Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      if: "contains(github.ref, 'refs/tags/v')"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: |
+          ./GF-BattleTester-JsonGenerator.zip
