@@ -1,7 +1,7 @@
 import logging
 import math
 import tkinter as tk
-from functools import cache, partial
+from functools import partial
 from typing import *
 
 from gf_utils.stc_data import GameData
@@ -74,24 +74,24 @@ class GunConfig(tk.Frame):
         self.columnconfigure(1, minsize=60)
         self.columnconfigure(2, minsize=30)
         self.columnconfigure(3, minsize=60)
-        tk.Label(self, text=f"人形{self.idx}").grid(row=0, column=0, sticky="e")
+        tk.Label(self, text=_("人形") + f"{self.idx}").grid(row=0, column=0, sticky="e")
         self.opt_gun.grid(row=0, column=1, columnspan=3, sticky="we")
-        tk.Label(self, text="皮肤").grid(row=1, column=0, sticky="e")
+        tk.Label(self, text=_("皮肤")).grid(row=1, column=0, sticky="e")
         self.opt_skin.grid(row=1, column=1, columnspan=3, sticky="we")
-        tk.Label(self, text="Lv").grid(row=2, column=0, sticky="e")
+        tk.Label(self, text=_("LV")).grid(row=2, column=0, sticky="e")
         self.ent_level.grid(row=2, column=1, sticky="we")
-        tk.Label(self, text="编制").grid(row=2, column=2, sticky="e")
+        tk.Label(self, text=_("编制")).grid(row=2, column=2, sticky="e")
         self.ent_number.grid(row=2, column=3, sticky="we")
-        tk.Label(self, text="Mod").grid(row=3, column=0, sticky="e")
+        tk.Label(self, text=_("Mod")).grid(row=3, column=0, sticky="e")
         self.ent_mod.grid(row=3, column=1, sticky="we")
-        tk.Label(self, text="好感").grid(row=3, column=2, sticky="e")
+        tk.Label(self, text=_("好感")).grid(row=3, column=2, sticky="e")
         self.ent_favor.grid(row=3, column=3, sticky="we")
-        tk.Label(self, text="技能1").grid(row=4, column=0, sticky="e")
+        tk.Label(self, text=_("技能1")).grid(row=4, column=0, sticky="e")
         self.ent_skill1.grid(row=4, column=1, sticky="we")
-        tk.Label(self, text="技能2").grid(row=4, column=2, sticky="e")
+        tk.Label(self, text=_("技能2")).grid(row=4, column=2, sticky="e")
         self.ent_skill2.grid(row=4, column=3, sticky="we")
-        tk.Label(self, text="装备").grid(row=5, column=1)
-        tk.Label(self, text="等级").grid(row=5, column=3)
+        tk.Label(self, text=_("装备")).grid(row=5, column=1)
+        tk.Label(self, text=_("LV")).grid(row=5, column=3)
         for i in range(1, 4):
             self.opt_equip[i].grid(row=5 + i, column=0, columnspan=3, sticky="we")
             self.ent_equip_lv[i].grid(row=5 + i, column=3, sticky="we")

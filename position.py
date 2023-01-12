@@ -6,7 +6,7 @@ class Positioning(tk.Frame):
         super().__init__(*args, **kwargs)
         for i in range(3):
             self.columnconfigure(i, weight=1, minsize=60)
-        tk.Label(self, text="站位").grid(row=0, column=0, columnspan=3)
+        tk.Label(self, text=_("站位")).grid(row=0, column=0, columnspan=3)
         self.posvar = {}
         for i in range(3):
             for j in range(3):

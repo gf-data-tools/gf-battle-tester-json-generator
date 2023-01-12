@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-01-12 21:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp65001\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: ./app.py:30
+msgid "生成JSON"
+msgstr ""
+
+#: ./fairy.py:49
+msgid "妖精"
+msgstr ""
+
+#: ./fairy.py:51
+msgid "天赋"
+msgstr ""
+
+#: ./fairy.py:53 ./gun.py:81 ./gun.py:94
+msgid "LV"
+msgstr ""
+
+#: ./fairy.py:55
+msgid "星级"
+msgstr ""
+
+#: ./fairy.py:57
+msgid "技能"
+msgstr ""
+
+#: ./gun.py:77
+msgid "人形"
+msgstr ""
+
+#: ./gun.py:79
+msgid "皮肤"
+msgstr ""
+
+#: ./gun.py:83
+msgid "编制"
+msgstr ""
+
+#: ./gun.py:85
+msgid "Mod"
+msgstr ""
+
+#: ./gun.py:87
+msgid "好感"
+msgstr ""
+
+#: ./gun.py:89
+msgid "技能1"
+msgstr ""
+
+#: ./gun.py:91
+msgid "技能2"
+msgstr ""
+
+#: ./gun.py:93
+msgid "装备"
+msgstr ""
+
+#: ./position.py:9
+msgid "站位"
+msgstr ""
+

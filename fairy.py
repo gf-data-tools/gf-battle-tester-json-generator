@@ -46,15 +46,15 @@ class FairyConfig(tk.Frame):
 
         self.columnconfigure(0, minsize=30)
         self.columnconfigure(1, minsize=60)
-        tk.Label(self, text=f"妖精").grid(row=0, column=0, sticky="e")
+        tk.Label(self, text=_("妖精")).grid(row=0, column=0, sticky="e")
         self.opt_fairy.grid(row=0, column=1, sticky="we")
-        tk.Label(self, text=f"天赋").grid(row=1, column=0, sticky="e")
+        tk.Label(self, text=_("天赋")).grid(row=1, column=0, sticky="e")
         self.opt_talent.grid(row=1, column=1, sticky="we")
-        tk.Label(self, text=f"Lv").grid(row=2, column=0, sticky="e")
+        tk.Label(self, text=_("LV")).grid(row=2, column=0, sticky="e")
         self.ent_level.grid(row=2, column=1, sticky="we")
-        tk.Label(self, text=f"星级").grid(row=3, column=0, sticky="e")
+        tk.Label(self, text=_("星级")).grid(row=3, column=0, sticky="e")
         self.ent_rank.grid(row=3, column=1, sticky="we")
-        tk.Label(self, text=f"技能").grid(row=4, column=0, sticky="e")
+        tk.Label(self, text=_("技能")).grid(row=4, column=0, sticky="e")
         self.ent_skill1.grid(row=4, column=1, sticky="we")
 
     def generate_record(self):
