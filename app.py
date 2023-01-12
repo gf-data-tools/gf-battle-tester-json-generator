@@ -72,4 +72,4 @@ class App(tk.Tk):
 
 if __name__ == "__main__":
     logger.setLevel("DEBUG")
-    App(region="kr").mainloop()
+    App().mainloop()
