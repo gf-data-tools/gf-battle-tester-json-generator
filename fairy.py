@@ -1,7 +1,5 @@
-import logging
-import math
 import tkinter as tk
-from functools import cache, partial
+from functools import partial
 from typing import *
 
 from gf_utils.stc_data import GameData
