@@ -3,7 +3,7 @@ A tool for [GFAlarm](https://gall.dcinside.com/micateam/1439586) to create arbit
 
 You may even generate teams that are normally **invalid**
 
-Example Usage:
+Example Usage:  
 ![config](img/showcase1.png)
 ![effect1](img/showcase2.png)
 ![effect2](img/showcase3.png)
