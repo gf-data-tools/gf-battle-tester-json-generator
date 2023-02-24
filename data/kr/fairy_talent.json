@@ -1,170 +1,30 @@
 [
-    {
-        "id": 755192,
-        "rank": 0,
-        "type_id": 1,
-        "name": "포석계"
-    },
-    {
-        "id": 756123,
-        "rank": 0,
-        "type_id": 1,
-        "name": "요술계"
-    },
-    {
-        "id": 757090,
-        "rank": 0,
-        "type_id": 1,
-        "name": "성광계"
-    },
-    {
-        "id": 900906,
-        "rank": 0,
-        "type_id": 1,
-        "name": "모래폭풍"
-    },
-    {
-        "id": 902385,
-        "rank": 0,
-        "type_id": 1,
-        "name": "환호계"
-    },
-    {
-        "id": 910101,
-        "rank": 1,
-        "type_id": 2,
-        "name": "살상계I"
-    },
-    {
-        "id": 910102,
-        "rank": 2,
-        "type_id": 2,
-        "name": "살상계II"
-    },
-    {
-        "id": 910103,
-        "rank": 1,
-        "type_id": 3,
-        "name": "정밀계I"
-    },
-    {
-        "id": 910104,
-        "rank": 2,
-        "type_id": 3,
-        "name": "정밀계II"
-    },
-    {
-        "id": 910105,
-        "rank": 1,
-        "type_id": 4,
-        "name": "회피계I"
-    },
-    {
-        "id": 910106,
-        "rank": 2,
-        "type_id": 4,
-        "name": "회피계II"
-    },
-    {
-        "id": 910107,
-        "rank": 1,
-        "type_id": 5,
-        "name": "장갑계I"
-    },
-    {
-        "id": 910108,
-        "rank": 2,
-        "type_id": 5,
-        "name": "장갑계II"
-    },
-    {
-        "id": 910109,
-        "rank": 1,
-        "type_id": 6,
-        "name": "필살계I"
-    },
-    {
-        "id": 910110,
-        "rank": 2,
-        "type_id": 6,
-        "name": "필살계II"
-    },
-    {
-        "id": 910111,
-        "rank": 1,
-        "type_id": 8,
-        "name": "선봉계"
-    },
-    {
-        "id": 910112,
-        "rank": 1,
-        "type_id": 9,
-        "name": "돌격계"
-    },
-    {
-        "id": 910113,
-        "rank": 1,
-        "type_id": 10,
-        "name": "조준계"
-    },
-    {
-        "id": 910114,
-        "rank": 1,
-        "type_id": 11,
-        "name": "완강계"
-    },
-    {
-        "id": 910115,
-        "rank": 1,
-        "type_id": 12,
-        "name": "진압계"
-    },
-    {
-        "id": 910116,
-        "rank": 1,
-        "type_id": 13,
-        "name": "예민계"
-    },
-    {
-        "id": 910117,
-        "rank": 2,
-        "type_id": 7,
-        "name": "격양계"
-    },
-    {
-        "id": 910118,
-        "rank": 0,
-        "type_id": 1,
-        "name": "황금계"
-    },
-    {
-        "id": 910119,
-        "rank": 0,
-        "type_id": 1,
-        "name": "급양계"
-    },
-    {
-        "id": 910120,
-        "rank": 0,
-        "type_id": 1,
-        "name": "현란계"
-    },
-    {
-        "id": 910121,
-        "rank": 0,
-        "type_id": 1,
-        "name": "연하계"
-    },
-    {
-        "id": 910122,
-        "rank": 0,
-        "type_id": 1,
-        "name": "청량계"
-    },
-    {
-        "id": 910124,
-        "rank": 0,
-        "type_id": 1,
-        "name": "길운계"
-    }
+  { "id": 755192, "rank": 0, "type_id":  1, "name": "포석계"   }, 
+  { "id": 756123, "rank": 0, "type_id":  1, "name": "요술계"   }, 
+  { "id": 757090, "rank": 0, "type_id":  1, "name": "성광계"   }, 
+  { "id": 900906, "rank": 0, "type_id":  1, "name": "모래폭풍" }, 
+  { "id": 902385, "rank": 0, "type_id":  1, "name": "환호계"   }, 
+  { "id": 910101, "rank": 1, "type_id":  2, "name": "살상계I"  }, 
+  { "id": 910102, "rank": 2, "type_id":  2, "name": "살상계II" }, 
+  { "id": 910103, "rank": 1, "type_id":  3, "name": "정밀계I"  }, 
+  { "id": 910104, "rank": 2, "type_id":  3, "name": "정밀계II" }, 
+  { "id": 910105, "rank": 1, "type_id":  4, "name": "회피계I"  }, 
+  { "id": 910106, "rank": 2, "type_id":  4, "name": "회피계II" }, 
+  { "id": 910107, "rank": 1, "type_id":  5, "name": "장갑계I"  }, 
+  { "id": 910108, "rank": 2, "type_id":  5, "name": "장갑계II" }, 
+  { "id": 910109, "rank": 1, "type_id":  6, "name": "필살계I"  }, 
+  { "id": 910110, "rank": 2, "type_id":  6, "name": "필살계II" }, 
+  { "id": 910111, "rank": 1, "type_id":  8, "name": "선봉계"   }, 
+  { "id": 910112, "rank": 1, "type_id":  9, "name": "돌격계"   }, 
+  { "id": 910113, "rank": 1, "type_id": 10, "name": "조준계"   }, 
+  { "id": 910114, "rank": 1, "type_id": 11, "name": "완강계"   }, 
+  { "id": 910115, "rank": 1, "type_id": 12, "name": "진압계"   }, 
+  { "id": 910116, "rank": 1, "type_id": 13, "name": "예민계"   }, 
+  { "id": 910117, "rank": 2, "type_id":  7, "name": "격양계"   }, 
+  { "id": 910118, "rank": 0, "type_id":  1, "name": "황금계"   }, 
+  { "id": 910119, "rank": 0, "type_id":  1, "name": "급양계"   }, 
+  { "id": 910120, "rank": 0, "type_id":  1, "name": "현란계"   }, 
+  { "id": 910121, "rank": 0, "type_id":  1, "name": "연하계"   }, 
+  { "id": 910122, "rank": 0, "type_id":  1, "name": "청량계"   }, 
+  { "id": 910124, "rank": 0, "type_id":  1, "name": "길운계"   }
 ]
