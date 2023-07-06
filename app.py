@@ -25,7 +25,15 @@ class App(tk.Tk):
         self.region = region
         self.output_path = Path("outputs")
         gettext.translation("app", localedir="locales", languages=[region]).install()
-        gamedata = GameData(Rf"data\{region}")
+        gamedata = GameData(
+            stc_dir=[
+                Rf"../GF_Data_Tools/data/{region}/stc/",
+                Rf"../GF_Data_Tools/data/{region}/catchdata/",
+            ],
+            table_dir=Rf"../GF_Data_Tools/data/{region}/asset/table",
+            ext="json",
+        )
+        print(list(gamedata.keys()))
         self.gun_config: dict[int, GunConfig] = {}
         for i in range(1, 6):
             gun_config = GunConfig(i, gamedata, master=self)
@@ -40,10 +48,19 @@ class App(tk.Tk):
 
         self.var_region = tk.StringVar(value=region)
         self.opt_region = tk.OptionMenu(
-            self.controller, self.var_region, "ch", "tw", "jp", "kr", "us", command=lambda var: self.setup(var)
+            self.controller,
+            self.var_region,
+            "ch",
+            "tw",
+            "jp",
+            "kr",
+            "us",
+            command=lambda var: self.setup(var),
         )
 
-        self.btn_generate = tk.Button(self.controller, text=_("生成JSON"), command=self.generate_json)
+        self.btn_generate = tk.Button(
+            self.controller, text=_("生成JSON"), command=self.generate_json
+        )
 
         self.opt_region.grid(row=0, column=0, sticky="we")
         self.btn_generate.grid(row=1, column=0, sticky="we")
@@ -63,8 +80,12 @@ class App(tk.Tk):
         from pathlib import Path
 
         json.dump(gun_full, (self.output_path / "gun_with_user_info.json").open("w"))
-        json.dump(equip_full, (self.output_path / "equip_with_user_info.json").open("w"))
-        json.dump(fairy_full, (self.output_path / "fairy_with_user_info.json").open("w"))
+        json.dump(
+            equip_full, (self.output_path / "equip_with_user_info.json").open("w")
+        )
+        json.dump(
+            fairy_full, (self.output_path / "fairy_with_user_info.json").open("w")
+        )
 
     def change_region(self, region):
         raise RuntimeError(region)
